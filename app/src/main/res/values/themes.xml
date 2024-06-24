@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MiCocina" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/azul</item>
+        <item name="colorPrimaryVariant">@color/azul_oscuro</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.MiCocina" parent="Base.Theme.MiCocina" />
+
+    <style name="BottomNavigation">
+        <item name="android:background">@color/azul_oscuro</item>
+        <item name="itemIconTint">@color/azul_claro2</item>
+        <item name="itemTextColor">@color/azul_claro2</item>
+    </style>
+</resources>

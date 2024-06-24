@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Mi Cocina</string>
+    <!--    Valores de LayoutLogin-->
+    <string name="txtPieLogin">Descubre y comparte recetas increibles</string>
+    <string name="txtusuarioLogin">Usuario</string>
+    <string name="txtContraseñaLogin">Contraseña</string>
+    <string name="btnLogin">Iniciar Sesión</string>
+    <string name="txtCrearCuentaLogin">No tiene una cuenta?</string>
+    <string name="btnRegistrarseLogin">Registrarse</string>
+    <!--    Fin Valores de LayoutLogin-->
+
+    <!--    Valores de FragmentoInicio-->
+    <string name="txtRecetaInicio">Recetas para ti</string>
+    <!--   Fin de Valores de FragmentoInicio-->
+
+    <!--    Valores de FragmentoCrear-->
+    <string name="txtTituloCrear">Crear Receta</string>
+    <string name="txtTituloReceta">Titulo de Receta</string>
+    <string name="txtHintTitulo">Ingrese el titulo de la receta</string>
+    <string name="txtIngrediente">Ingredientes</string>
+    <string name="txtHintIngrediente">Liste sus ingredientes</string>
+    <string name="txtInstrucciones">Instrucciones</string>
+    <string name="txtHintInstrucciones">Describa el paso a paso</string>
+    <string name="txtDificultadReceta">Dificultad de Receta</string>
+    <string name="txtPorcionReceta">Porciones</string>
+    <string name="hintPorcionReceta">Ingrese la cantidad de porciones</string>
+    <string name="txtFoto">Subir foto</string>
+    <string name="txtHintfoto">Suba una foto de su platillo</string>
+    <string name="btnSubirReceta">Postear</string>
+    <string name="btnCancelarReceta">Cancelar</string>
+    <!--   Fin de Valores de FragmentoCrear-->
+
+</resources>
