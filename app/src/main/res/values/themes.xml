@@ -14,4 +14,9 @@
         <item name="itemIconTint">@color/azul_claro2</item>
         <item name="itemTextColor">@color/azul_claro2</item>
     </style>
+
+    <style name="imgCircular">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

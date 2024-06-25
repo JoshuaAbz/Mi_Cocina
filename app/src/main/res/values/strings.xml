@@ -9,11 +9,11 @@
     <string name="btnRegistrarseLogin">Registrarse</string>
     <!--    Fin Valores de LayoutLogin-->
 
-    <!--    Valores de FragmentoInicio-->
+    <!--    Valores de LayoutInicio-->
     <string name="txtRecetaInicio">Recetas para ti</string>
-    <!--   Fin de Valores de FragmentoInicio-->
+    <!--   Fin de Valores de LayoutInicio-->
 
-    <!--    Valores de FragmentoCrear-->
+    <!--    Valores de LayoutCrearReceta-->
     <string name="txtTituloCrear">Crear Receta</string>
     <string name="txtTituloReceta">Titulo de Receta</string>
     <string name="txtHintTitulo">Ingrese el titulo de la receta</string>
@@ -28,6 +28,11 @@
     <string name="txtHintfoto">Suba una foto de su platillo</string>
     <string name="btnSubirReceta">Postear</string>
     <string name="btnCancelarReceta">Cancelar</string>
-    <!--   Fin de Valores de FragmentoCrear-->
+    <!--   Fin de Valores de LayoutCrearReceta-->
+
+    <!-- Valores de LayoutBUscar-->
+    <string name="txtHintBuscar">Buscar</string>
+    <!-- Fin de Valores de LayoutBUscar-->
+
 
 </resources>

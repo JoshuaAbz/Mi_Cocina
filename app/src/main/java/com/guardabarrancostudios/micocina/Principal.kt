@@ -5,12 +5,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.Fragment
 import com.guardabarrancostudios.micocina.databinding.ActivityPrincipalBinding
 
 class Principal : AppCompatActivity() {
 
     private lateinit var binding: ActivityPrincipalBinding
+
+    private var idItemActual: Int = R.id.nav_inicio
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,31 +25,41 @@ class Principal : AppCompatActivity() {
             insets
         }
 
-        // Set default fragment
-        loadFragment(Inicio())
-
-        binding.navegacion.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_inicio -> {
-                    loadFragment(Inicio())
-                    true
+        // Configurar el BottomNavigationView
+        binding.navegacion.setOnNavigationItemSelectedListener { menuItem ->
+            if (menuItem.itemId != idItemActual) {
+                when (menuItem.itemId) {
+                    R.id.nav_crear -> {
+                        idItemActual = R.id.nav_crear
+                        loadLayout(R.layout.activity_crear_receta)
+                        true
+                    }
+                    R.id.nav_inicio -> {
+                        idItemActual = R.id.nav_inicio
+                        loadLayout(R.layout.activity_inicio)
+                        true
+                    }
+                    R.id.nav_perfil -> {
+                        idItemActual = R.id.nav_perfil
+                        loadLayout(R.layout.activity_perfil)
+                        true
+                    }
+                    else -> false
                 }
-                R.id.nav_crear -> {
-                    loadFragment(Crear())
-                    true
-                }
-                R.id.nav_perfil -> {
-                    loadFragment(Perfil())
-                    true
-                }
-                else -> false
+            } else {
+                true
             }
         }
+
+        // Cargar el layout de inicio por defecto
+        loadLayout(R.layout.activity_inicio)
     }
 
-    private fun loadFragment(fragment: Fragment) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.contenedor, fragment)
-        transaction.commit()
+    private fun loadLayout(layoutResId: Int) {
+        // Inflar el layout y agregarlo al FrameLayout
+        val inflater = layoutInflater
+        val view = inflater.inflate(layoutResId, binding.contenedor, false)
+        binding.contenedor.removeAllViews()
+        binding.contenedor.addView(view)
     }
 }

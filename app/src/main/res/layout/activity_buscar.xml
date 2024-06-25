@@ -7,14 +7,67 @@
     android:layout_height="match_parent"
     tools:context=".Buscar">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CabeceraBuscar"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:text="Aun falta por diseñarse"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="30sp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editTextText2"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_marginStart="15dp"
+            android:background="@color/material_dynamic_neutral90"
+            app:layout_constraintStart_toEndOf="@id/imgLupaBuscar"
+            android:text="@string/txtHintBuscar"
+            app:layout_constraintBottom_toBottomOf="@id/imgLupaBuscar"
+            app:layout_constraintTop_toTopOf="@id/imgLupaBuscar"
+            android:fontFamily="sans-serif"
+            tools:layout_editor_absoluteX="183dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageButton
+            android:id="@+id/btnAtras"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerCrop"
+            android:src="@drawable/atras"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="25dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:id="@+id/imgLupaBuscar"
+            android:layout_width="30dp"
+            android:layout_height="44dp"
+            app:srcCompat="@drawable/lupa"
+            app:layout_constraintStart_toEndOf="@id/btnAtras"
+            app:layout_constraintTop_toTopOf="@id/btnAtras"
+            app:layout_constraintBottom_toBottomOf="@id/btnAtras"
+            android:layout_marginStart="35dp"
+            tools:layout_editor_absoluteX="89dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="68dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CabeceraBuscar"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

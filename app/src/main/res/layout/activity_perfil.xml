@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Perfil">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cabeceraPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgperfil"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/rolando"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/imgCircular">
+
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <TextView
+                android:id="@+id/txtUserPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Rolando_Melgara_20"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/imgperfil"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgperfil"
+                app:layout_constraintTop_toTopOf="@id/imgperfil"
+                tools:layout_editor_absoluteX="177dp"
+                tools:layout_editor_absoluteY="38dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/piePerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azul_claro2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cabeceraPerfil"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="131dp">
+
+            <TextView
+                android:id="@+id/txtNumeroPosts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="30"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="35dp" />
+
+            <TextView
+                android:id="@+id/txtPublicaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:text="Publicaciones"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/txtNumeroPosts"
+                app:layout_constraintStart_toStartOf="@id/txtNumeroPosts"
+                app:layout_constraintTop_toBottomOf="@id/txtNumeroPosts"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="86dp" />
+
+            <TextView
+                android:id="@+id/txtNumeroSeguidores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="50"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@id/txtNumeroSeguidos"
+                app:layout_constraintStart_toEndOf="@id/txtNumeroPosts"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="172dp"
+                tools:layout_editor_absoluteY="36dp" />
+
+            <TextView
+                android:id="@+id/txtSeguidores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:layout_marginStart="15dp"
+                android:text="Seguidores"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/txtNumeroSeguidores"
+                app:layout_constraintStart_toStartOf="@id/txtNumeroSeguidores"
+                app:layout_constraintTop_toBottomOf="@id/txtNumeroSeguidores"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="81dp" />
+
+            <TextView
+                android:id="@+id/txtNumeroSeguidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="sans-serif-black"
+                android:text="100"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtSeguidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:text="Seguidos"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/txtNumeroSeguidos"
+                app:layout_constraintStart_toStartOf="@id/txtNumeroSeguidos"
+                app:layout_constraintTop_toBottomOf="@id/txtNumeroSeguidos"
+                tools:layout_editor_absoluteX="305dp"
+                tools:layout_editor_absoluteY="76dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerRecetasPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/piePerfil"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="236dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
