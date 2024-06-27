@@ -19,16 +19,13 @@
             android:name=".Inicio"
             android:exported="false" />
         <activity
-            android:name=".Crear_Receta"
+            android:name=".CrearReceta"
             android:exported="false" />
         <activity
             android:name=".Registrar"
             android:exported="false" />
         <activity
             android:name=".Buscar"
-            android:exported="false" />
-        <activity
-            android:name=".Principal"
             android:exported="false" />
         <activity
             android:name=".Login"

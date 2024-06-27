@@ -1,229 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Crear_Receta">
+    tools:context=".CrearReceta">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:id="@+id/cabecera"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="70dp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
 
-        <LinearLayout
-            android:id="@+id/cabecera"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:background="@android:color/holo_blue_dark"
+        <TextView
+            android:id="@+id/txtTituloCrear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-black"
             android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="1dp">
+            android:text="@string/txtTituloCrear"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/txtTituloCrear"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="sans-serif-black"
-                android:gravity="center"
-                android:text="@string/txtTituloCrear"
-                android:textColor="@color/white"
-                android:textSize="30sp" />
-        </LinearLayout>
-
-        <ScrollView
-            android:id="@id/contenidoCrear"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearPieCrear"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cabecera">
-
-            <LinearLayout
-                android:id="@+id/contenidoCrear"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteX="1dp"
-                tools:layout_editor_absoluteY="202dp">
-
-                <TextView
-                    android:id="@+id/txtTituloReceta"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/txtTituloReceta"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/edtxtReceta"
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@color/material_dynamic_neutral90"
-                    android:ems="20"
-                    android:hint="@string/txtHintTitulo"
-                    android:inputType="text"
-                    android:textColorHint="@android:color/darker_gray" />
-
-                <TextView
-                    android:id="@+id/txtTituloIngrediente"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/txtIngrediente"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/edtxtIngredientes"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@color/material_dynamic_neutral_variant90"
-                    android:ems="20"
-                    android:gravity="start|top"
-                    android:hint="@string/txtHintIngrediente"
-                    android:inputType="textMultiLine"
-                    android:textAlignment="viewStart"
-                    android:textColorHint="@android:color/darker_gray" />
-
-                <TextView
-                    android:id="@+id/txtTituloInstrucciones"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/txtInstrucciones"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/edtxtInstrucciones"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@color/material_dynamic_neutral90"
-                    android:ems="20"
-                    android:gravity="start|top"
-                    android:hint="@string/txtHintInstrucciones"
-                    android:inputType="textMultiLine"
-                    android:textAlignment="viewStart"
-                    android:textColorHint="@android:color/darker_gray" />
-
-                <TextView
-                    android:id="@+id/txtTituloDificultad"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/txtDificultadReceta"
-                    android:textSize="20sp" />
-
-                <RadioGroup
-                    android:id="@+id/radioDificultad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/radioFacil"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Fácil" />
-
-                    <RadioButton
-                        android:id="@+id/radioMedio"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Medio" />
-
-                    <RadioButton
-                        android:id="@+id/radioDificil"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Difícil" />
-                </RadioGroup>
-
-                <TextView
-                    android:id="@+id/txtTituloPorciones"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/txtPorcionReceta"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/edtxtPorciones"
-                    android:layout_width="270dp"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@color/material_dynamic_neutral_variant90"
-                    android:ems="2"
-                    android:hint="@string/hintPorcionReceta"
-                    android:inputType="number"
-                    android:textColorHint="@android:color/darker_gray" />
-
-                <TextView
-                    android:id="@+id/txtTituloFoto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/txtFoto"
-                    android:textSize="20sp" />
-
-                <Button
-                    android:id="@+id/btnSeleccionarImagen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@android:color/holo_blue_dark"
-                    android:text="@string/txtHintfoto"
-                    app:icon="@drawable/camera" />
-            </LinearLayout>
-        </ScrollView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/NavegadorCrear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cabecera">
 
         <LinearLayout
-            android:id="@+id/linearPieCrear"
+            android:id="@+id/contenidoCrear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/contenidoCrear"
+            android:orientation="vertical"
             tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="599dp">
+            tools:layout_editor_absoluteY="202dp">
+
+            <TextView
+                android:id="@+id/txtTituloReceta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/txtTituloReceta"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtxtReceta"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/material_dynamic_neutral90"
+                android:ems="20"
+                android:hint="@string/txtHintTitulo"
+                android:inputType="text"
+                android:textColorHint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txtTituloIngrediente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/txtIngrediente"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtxtIngredientes"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/material_dynamic_neutral_variant90"
+                android:ems="20"
+                android:gravity="start|top"
+                android:hint="@string/txtHintIngrediente"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart"
+                android:textColorHint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txtTituloInstrucciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/txtInstrucciones"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtxtInstrucciones"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/material_dynamic_neutral90"
+                android:ems="20"
+                android:gravity="start|top"
+                android:hint="@string/txtHintInstrucciones"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart"
+                android:textColorHint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txtTituloDificultad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/txtDificultadReceta"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/radioDificultad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioFacil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fácil" />
+
+                <RadioButton
+                    android:id="@+id/radioMedio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medio" />
+
+                <RadioButton
+                    android:id="@+id/radioDificil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Difícil" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txtTituloPorciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/txtPorcionReceta"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtxtPorciones"
+                android:layout_width="270dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/material_dynamic_neutral_variant90"
+                android:ems="2"
+                android:hint="@string/hintPorcionReceta"
+                android:inputType="number"
+                android:textColorHint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txtTituloFoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/txtFoto"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnSeleccionarImagen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:text="@string/txtHintfoto"
+                app:icon="@drawable/camera" />
 
             <Button
                 android:id="@+id/btnPostear"
@@ -232,7 +213,67 @@
                 android:backgroundTint="@android:color/holo_green_light"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/btnSubirReceta"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"/>
+
         </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/NavegadorCrear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="593dp"
+        android:background="@color/azul_oscuro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnInicio"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_home_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@id/NavegadorCrear"
+            app:layout_constraintStart_toStartOf="@id/NavegadorCrear"
+            app:layout_constraintTop_toTopOf="@id/NavegadorCrear"
+            app:layout_constraintVertical_bias="0.514" />
+
+        <ImageButton
+            android:id="@+id/btnCrear"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/crear"
+            app:layout_constraintStart_toEndOf="@id/btnInicio"
+            app:layout_constraintTop_toTopOf="@id/NavegadorCrear"
+            app:layout_constraintEnd_toStartOf="@id/btnPerfil"
+            app:layout_constraintBottom_toBottomOf="@id/NavegadorCrear"
+            />
+
+        <ImageButton
+            android:id="@+id/btnPerfil"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/perfil"
+            app:layout_constraintStart_toEndOf="@id/btnCrear"
+            app:layout_constraintTop_toTopOf="@id/NavegadorCrear"
+            app:layout_constraintEnd_toEndOf="@id/NavegadorCrear"
+            app:layout_constraintBottom_toBottomOf="@id/NavegadorCrear"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

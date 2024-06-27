@@ -26,5 +26,15 @@ class Inicio : AppCompatActivity() {
             startActivity(paginaBuscar)
         }
 
+        binding.btnCrear.setOnClickListener{
+            val paginaCrear = Intent(this, CrearReceta::class.java)
+            startActivity(paginaCrear)
+        }
+
+        binding.btnPerfil.setOnClickListener{
+            val paginaPerfil = Intent(this, Perfil::class.java)
+            startActivity(paginaPerfil)
+        }
+
     }
 }

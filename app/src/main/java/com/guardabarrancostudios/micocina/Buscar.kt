@@ -22,7 +22,7 @@ class Buscar : AppCompatActivity() {
         }
 
         binding.btnAtras.setOnClickListener{
-            val paginaInicio = Intent(this, Principal::class.java)
+            val paginaInicio = Intent(this, Inicio::class.java)
             startActivity(paginaInicio)
         }
 

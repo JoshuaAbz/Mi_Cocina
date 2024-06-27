@@ -26,7 +26,7 @@
             android:layout_marginStart="15dp"
             android:background="@color/material_dynamic_neutral90"
             app:layout_constraintStart_toEndOf="@id/imgLupaBuscar"
-            android:text="@string/txtHintBuscar"
+            android:hint="@string/txtHintBuscar"
             app:layout_constraintBottom_toBottomOf="@id/imgLupaBuscar"
             app:layout_constraintTop_toTopOf="@id/imgLupaBuscar"
             android:fontFamily="sans-serif"

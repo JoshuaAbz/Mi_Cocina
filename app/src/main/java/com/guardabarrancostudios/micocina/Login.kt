@@ -13,7 +13,7 @@ class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityLoginBinding.inflate((layoutInflater))
+        binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -22,7 +22,7 @@ class Login : AppCompatActivity() {
         }
 
         binding.btnLogin.setOnClickListener{
-            val paginaInicio = Intent(this, Principal::class.java)
+            val paginaInicio = Intent(this, Inicio::class.java)
             startActivity(paginaInicio)
         }
 
