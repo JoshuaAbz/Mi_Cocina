@@ -11,63 +11,68 @@
         android:id="@+id/CabeceraBuscar"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/edtxtBuscar"
             android:layout_width="wrap_content"
             android:layout_height="44dp"
-            android:ems="10"
-            android:inputType="text"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="20dp"
             android:background="@color/material_dynamic_neutral90"
-            app:layout_constraintStart_toEndOf="@id/imgLupaBuscar"
-            android:hint="@string/txtHintBuscar"
-            app:layout_constraintBottom_toBottomOf="@id/imgLupaBuscar"
-            app:layout_constraintTop_toTopOf="@id/imgLupaBuscar"
+            android:ems="10"
             android:fontFamily="sans-serif"
-            tools:layout_editor_absoluteX="183dp"
-            tools:layout_editor_absoluteY="16dp" />
+            android:hint="@string/txtBuscar"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@id/btnAtras"
+            app:layout_constraintEnd_toStartOf="@id/btnBuscar"
+            app:layout_constraintStart_toEndOf="@id/btnAtras"
+            app:layout_constraintTop_toTopOf="@id/btnAtras"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="25dp" />
 
         <ImageButton
             android:id="@+id/btnAtras"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerCrop"
             android:src="@drawable/atras"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="25dp"
-            android:layout_marginStart="25dp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="16dp" />
 
-        <ImageView
-            android:id="@+id/imgLupaBuscar"
-            android:layout_width="30dp"
-            android:layout_height="44dp"
-            app:srcCompat="@drawable/lupa"
-            app:layout_constraintStart_toEndOf="@id/btnAtras"
-            app:layout_constraintTop_toTopOf="@id/btnAtras"
-            app:layout_constraintBottom_toBottomOf="@id/btnAtras"
-            android:layout_marginStart="35dp"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="25dp" />
+        <Button
+            android:id="@+id/btnBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/txtBuscar"
+            app:layout_constraintBottom_toBottomOf="@id/edtxtBuscar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edtxtBuscar"
+            app:layout_constraintTop_toTopOf="@id/edtxtBuscar" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerRecetasBuscar"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="68dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/CabeceraBuscar"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CabeceraBuscar"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

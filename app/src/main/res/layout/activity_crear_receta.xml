@@ -8,7 +8,7 @@
     tools:context=".CrearReceta">
 
     <LinearLayout
-        android:id="@+id/cabecera"
+        android:id="@+id/cabeceraCrear"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@android:color/holo_blue_dark"
@@ -38,7 +38,7 @@
         app:layout_constraintBottom_toTopOf="@+id/NavegadorCrear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cabecera">
+        app:layout_constraintTop_toBottomOf="@id/cabeceraCrear">
 
         <LinearLayout
             android:id="@+id/contenidoCrear"
@@ -210,13 +210,13 @@
                 android:id="@+id/btnPostear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
                 android:backgroundTint="@android:color/holo_green_light"
                 android:fontFamily="sans-serif-black"
-                android:text="@string/btnSubirReceta"
-                android:textSize="20sp"
                 android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"/>
+                android:text="@string/btnSubirReceta"
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>
@@ -225,12 +225,12 @@
         android:id="@+id/NavegadorCrear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="593dp"
         android:background="@color/azul_oscuro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="593dp">
 
         <ImageButton
             android:id="@+id/btnInicio"
@@ -240,7 +240,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:padding="0dp"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_home_black_24dp"
+            android:src="@drawable/inicio"
             app:layout_constraintBottom_toBottomOf="@id/NavegadorCrear"
             app:layout_constraintStart_toStartOf="@id/NavegadorCrear"
             app:layout_constraintTop_toTopOf="@id/NavegadorCrear"
@@ -254,11 +254,10 @@
             android:padding="0dp"
             android:scaleType="fitXY"
             android:src="@drawable/crear"
-            app:layout_constraintStart_toEndOf="@id/btnInicio"
-            app:layout_constraintTop_toTopOf="@id/NavegadorCrear"
-            app:layout_constraintEnd_toStartOf="@id/btnPerfil"
             app:layout_constraintBottom_toBottomOf="@id/NavegadorCrear"
-            />
+            app:layout_constraintEnd_toStartOf="@id/btnPerfil"
+            app:layout_constraintStart_toEndOf="@id/btnInicio"
+            app:layout_constraintTop_toTopOf="@id/NavegadorCrear" />
 
         <ImageButton
             android:id="@+id/btnPerfil"
@@ -268,10 +267,10 @@
             android:padding="0dp"
             android:scaleType="fitXY"
             android:src="@drawable/perfil"
-            app:layout_constraintStart_toEndOf="@id/btnCrear"
-            app:layout_constraintTop_toTopOf="@id/NavegadorCrear"
+            app:layout_constraintBottom_toBottomOf="@id/NavegadorCrear"
             app:layout_constraintEnd_toEndOf="@id/NavegadorCrear"
-            app:layout_constraintBottom_toBottomOf="@id/NavegadorCrear"/>
+            app:layout_constraintStart_toEndOf="@id/btnCrear"
+            app:layout_constraintTop_toTopOf="@id/NavegadorCrear" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

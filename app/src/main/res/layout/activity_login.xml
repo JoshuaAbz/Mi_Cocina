@@ -8,7 +8,7 @@
     tools:context=".Login">
 
     <TextView
-        android:id="@+id/txtPieLogin"
+        android:id="@+id/txtAnuncioLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -34,14 +34,14 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imagenuser"
+            android:id="@+id/imagenUser"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             app:srcCompat="@drawable/user" />
 
         <EditText
-            android:id="@+id/edtxtuserlogin"
+            android:id="@+id/edtxtUserlogin"
             android:layout_width="227dp"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
@@ -67,14 +67,14 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imagencontraseña"
+            android:id="@+id/imagenContraseña"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             app:srcCompat="@drawable/contrasena" />
 
         <EditText
-            android:id="@+id/edtxtcontraseñalogin"
+            android:id="@+id/edtxtContraseñaLogin"
             android:layout_width="227dp"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"

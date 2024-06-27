@@ -8,20 +8,20 @@
     tools:context=".Inicio">
 
     <TextView
-        android:id="@+id/txtReceta"
+        android:id="@+id/txtRecetaInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/txtRecetaInicio"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@id/btnBuscar"
+        app:layout_constraintEnd_toStartOf="@id/btnBuscarInicio"
         app:layout_constraintHorizontal_bias="0.647"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/btnBuscar"
+        android:id="@+id/btnBuscarInicio"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="16dp"
@@ -30,7 +30,7 @@
         android:clickable="true"
         android:focusable="true"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@id/txtReceta"
+        app:layout_constraintBottom_toBottomOf="@id/txtRecetaInicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/lupa" />
@@ -44,13 +44,15 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtReceta" />
+        app:layout_constraintTop_toBottomOf="@id/txtRecetaInicio" />
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerRecetas"
+        android:id="@+id/recyclerRecetasInicio"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@id/NavegadorInicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,9 +64,9 @@
         android:layout_height="wrap_content"
         android:background="@color/azul_oscuro"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/recyclerRecetas"
-        app:layout_constraintStart_toStartOf="@id/recyclerRecetas"
-        app:layout_constraintTop_toBottomOf="@id/recyclerRecetas"
+        app:layout_constraintEnd_toEndOf="@id/recyclerRecetasInicio"
+        app:layout_constraintStart_toStartOf="@id/recyclerRecetasInicio"
+        app:layout_constraintTop_toBottomOf="@id/recyclerRecetasInicio"
         tools:layout_editor_absoluteX="141dp"
         tools:layout_editor_absoluteY="593dp">
 
@@ -76,7 +78,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:padding="0dp"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_home_black_24dp"
+            android:src="@drawable/inicio"
             app:layout_constraintBottom_toBottomOf="@id/NavegadorInicio"
             app:layout_constraintStart_toStartOf="@id/NavegadorInicio"
             app:layout_constraintTop_toTopOf="@id/NavegadorInicio"

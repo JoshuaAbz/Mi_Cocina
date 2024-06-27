@@ -31,7 +31,7 @@
     <!--   Fin de Valores de LayoutCrearReceta-->
 
     <!-- Valores de LayoutBUscar-->
-    <string name="txtHintBuscar">Buscar</string>
+    <string name="txtBuscar">Buscar</string>
     <!-- Fin de Valores de LayoutBUscar-->
 
 
