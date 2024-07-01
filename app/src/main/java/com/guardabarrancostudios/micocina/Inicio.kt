@@ -21,7 +21,7 @@ class Inicio : AppCompatActivity() {
             insets
         }
 
-        binding.btnBuscar.setOnClickListener{
+        binding.btnBuscarInicio.setOnClickListener{
             val paginaBuscar = Intent(this, Buscar::class.java)
             startActivity(paginaBuscar)
         }

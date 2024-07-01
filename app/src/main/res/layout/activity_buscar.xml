@@ -55,6 +55,7 @@
             android:layout_marginStart="16dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/txtBuscar"
+            android:layout_marginEnd="10dp"
             app:layout_constraintBottom_toBottomOf="@id/edtxtBuscar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/edtxtBuscar"

@@ -22,11 +22,11 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:scaleType="centerCrop"
+            android:layout_marginTop="20dp"
             android:src="@drawable/rolando"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/txtDescripcion"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/imgCircular">
@@ -47,12 +47,27 @@
             tools:layout_editor_absoluteX="177dp"
             tools:layout_editor_absoluteY="38dp" />
 
+        <TextView
+            android:id="@+id/txtDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Descripcion de us22222222222222222222uario random 12345678910"
+            android:textSize="16sp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/imgPerfil"
+            app:layout_constraintTop_toBottomOf="@id/imgPerfil"
+            tools:layout_editor_absoluteX="174dp"
+            tools:layout_editor_absoluteY="81dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/piePerfil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:background="@color/azul_claro2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

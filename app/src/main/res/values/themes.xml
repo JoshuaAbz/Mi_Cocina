@@ -19,4 +19,13 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+
+    <resources>
+        <style name="estrellas">
+            <item name="colorControlNormal">@android:color/darker_gray</item>
+            <item name="colorControlActivated">@android:color/holo_orange_light</item>
+            <item name="colorControlHighlight">@android:color/holo_orange_dark</item>
+        </style>
+    </resources>
+
 </resources>
